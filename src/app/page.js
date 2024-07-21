@@ -70,7 +70,7 @@ export default function Home() {
 
   return (
     <>
-    <div className="relative h-130 overflow-hidden" data-aos="fade-up">
+    <div className="relative h-[37rem] overflow-hidden" data-aos="fade-up">
         {images.map((image, index) => (
           <div
             key={index}
@@ -81,7 +81,7 @@ export default function Home() {
             <Image src={image.src} alt={image.alt} layout="fill" objectFit="cover" priority />
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-center">
               <h2 className="text-md mb-2 uppercase text-white">{image.subtitle}</h2>
-              <h1 className="mx-4 mb-4 text-3xl font-bold text-white md:text-6xl">{image.title}</h1>
+              <h1 className="mx-8 mb-4 text-3xl font-bold text-white md:text-6xl">{image.title}</h1>
               <Link href="/">
                 <button className="rounded-sm bg-white px-8 py-4 font-semibold text-black hover:text-[#ef1c25]">
                   Explore Our Work

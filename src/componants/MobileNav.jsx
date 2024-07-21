@@ -1,38 +1,42 @@
-'use client'
+"use client";
 
-import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Dialog, Transition } from "@headlessui/react";
+import { Fragment, useState } from "react";
 
 // import headerNavLinks from '@/data/headerNavLinks'
-import Link from 'next/link'
+import Link from "next/link";
 
 const MobileNav = () => {
-    const headerNavLinks = [
-        { href: '/', title: 'Home' },
-        { href: '/about', title: 'About Us' },
-        { href: '/impact', title: 'Impact' },
-        { href: '/board', title: 'Board' },
-        { href: '/business', title: 'Business' },
-        { href: '/career', title: 'Career' },
-        { href: '/contactus', title: ' Contact Us' },
-      ]
-  const [navShow, setNavShow] = useState(false)
+  const headerNavLinks = [
+    { href: "/", title: "Home" },
+    { href: "/about", title: "About Us" },
+    { href: "/impact", title: "Impact" },
+    { href: "/board", title: "Board" },
+    { href: "/business", title: "Business" },
+    { href: "/career", title: "Career" },
+    { href: "/contactus", title: " Contact Us" },
+  ];
+  const [navShow, setNavShow] = useState(false);
 
   const onToggleNav = () => {
     setNavShow((status) => {
       if (status) {
-        document.body.style.overflow = 'auto'
+        document.body.style.overflow = "auto";
       } else {
         // Prevent scrolling
-        document.body.style.overflow = 'hidden'
+        document.body.style.overflow = "hidden";
       }
-      return !status
-    })
-  }
+      return !status;
+    });
+  };
 
   return (
     <>
-      <button aria-label="Toggle Menu" onClick={onToggleNav} className="sm:hidden">
+      <button
+        aria-label="Toggle Menu"
+        onClick={onToggleNav}
+        className="sm:hidden"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
@@ -113,7 +117,7 @@ const MobileNav = () => {
         </Dialog>
       </Transition>
     </>
-  )
-}
+  );
+};
 
-export default MobileNav
+export default MobileNav;

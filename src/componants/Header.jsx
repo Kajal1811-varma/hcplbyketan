@@ -1,9 +1,7 @@
-// import siteMetadata from '@/data/siteMetadata'
-// import HcplLogo from 'public/HcplLogo.jpeg'
+
 import Link from 'next/link'
 import MobileNav from './MobileNav'
 import Image from 'next/image'
-// import image1 from "p"
 
 const Header = () => {
     const headerNavLinks = [
@@ -16,7 +14,7 @@ const Header = () => {
         { href: '/contactus', title: ' Contact Us' },
       ]
   return (
-    <header className="container mx-auto flex items-center justify-between py-3">
+    <header className="container mx-auto flex items-center justify-between py-4">
       <div>
         <Link href="/" aria-label="">
           <div className="flex items-center justify-between">
@@ -26,7 +24,7 @@ const Header = () => {
           </div>
         </Link>
       </div>
-      <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
+      <div className="flex items-center gap-4 text-lg space-x-4 leading-5 sm:space-x-6">
         {headerNavLinks
           .filter((link) => link.href !== '/')
           .map((link) => (
